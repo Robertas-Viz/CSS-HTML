@@ -1,0 +1,210 @@
+
+/***************************************************************************
+                          START
+********************************************************************************/
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+
+  
+body {
+  font-family: 'Cutive Mono', monospace;
+  font-weight: 700;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  box-sizing: border-box;
+  overflow-x: hidden;
+    
+  }
+
+ 
+    
+
+
+ /************SVG 3 ICON*****************************/
+  .worker{
+background-image: url(../img/svg/professions-and-jobs.svg);
+  }
+  .target {
+background-image: url(../img/svg/target.svg);
+  }
+  .tasks{
+background-image: url(../img/svg/checklist.svg);  }
+/****************************************************************************
+               NAVIGATION
+*****************************************************************************/
+.navbar .nav-link {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+ 
+ 
+}
+.navbar .nav-link {
+  color: black !important;
+}
+
+.navbar .nav-item.active {
+  border-left: #444 3px solid;
+  
+  
+}
+#navbar {
+  background-color: rgb(230, 225, 225) !important;
+  position: fixed;
+  top: -90px;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  
+  
+}
+
+.navbar-brand {
+  color: black !important;
+
+  
+}
+
+/****************************************************************************
+               HERO IMG  AND BUTTON
+*****************************************************************************/
+
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(31, 0, 207, 0.2), rgba(13, 8, 34, 0.438)), url(../img/ava.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+
+  .header__text-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: azure;
+   
+  
+    
+   }
+  
+   @media only screen and (max-width: 500px) {
+    h1{
+      font-size: 1.4rem;
+      width: 80vw;
+      font-weight: 900;
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-size: 1rem;
+      width: 80vw;
+      font-weight: 100;
+    }
+  } 
+  @media only screen and (max-width: 1100px) {
+    h1{
+      font-size: 1.4rem;
+      width: 80vw;
+      font-weight: 900;
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-size: 1rem;
+      width: 80vw;
+      font-weight: 100;
+    }
+  } 
+
+
+  @media only screen and (min-width: 1101px) {
+    h1{
+      font-size: 3rem ;
+      width: 90vw;
+      font-weight: 900;
+      margin-bottom: 5rem;
+    }
+    h2 {
+      font-size: 2rem;
+      width: 80vw;
+      font-weight: 100;
+    }
+  } 
+
+
+
+
+     
+       /****************************************************************************
+                     CARDS
+       *******************************************************************************/
+
+      .card3 {
+        
+       margin-top: 7rem;
+      
+      }
+
+      .card-img-bottom {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+    }
+    
+     
+       
+        
+       /***************************************************************************************
+                          ABOUT-US
+       ********************************************************************/
+     
+#about-us {
+  padding-top: 7rem;
+}
+
+#about-us2 {
+  padding-top: 7rem;
+}
+
+
+
+
+
+
+
+
+
+/**********FEATURES******************/
+
+  
+    .section-features {
+      padding: 10rem 0;
+      background-image: linear-gradient(to right bottom, rgba(22, 17, 18, 0.8), rgba(202, 14, 54, 0.8)), url(../img/bg-red.jpg);
+      background-size: cover;
+      transform: skewY(-7deg);
+      margin-top: 10rem; }
+
+      
+      .section-features > * {
+        transform: skewY(7deg); }
+
+
+
+
+
+
+
+    @media only screen and (max-width: 500px) {
+    
+    } 
