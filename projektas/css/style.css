@@ -15,33 +15,33 @@
 
   
 body {
-  font-family: 'Cutive Mono', monospace;
-  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   /*font-size: 16px;*/
-  line-height: 1.7;
+  line-height: 2;
   box-sizing: border-box;
-  overflow-x: hidden;
+ overflow-x: hidden ;
+
+
+
+
     
+  }
+
+  .btn {
+    margin: 1rem;
+  }
+  h6 {
+    font-size: 45px;
+
   }
 
  
-    
-
-
- /************SVG 3 ICON*****************************/
-  .worker{
-background-image: url(../img/svg/professions-and-jobs.svg);
-  }
-  .target {
-background-image: url(../img/svg/target.svg);
-  }
-  .tasks{
-background-image: url(../img/svg/checklist.svg);  }
 /****************************************************************************
                NAVIGATION
 *****************************************************************************/
 .navbar .nav-link {
-  font-size: 14px;
+  font-size: 19px;
   text-transform: uppercase;
   padding-left: 1rem !important;
   padding-right: 1rem !important;
@@ -60,10 +60,10 @@ background-image: url(../img/svg/checklist.svg);  }
 #navbar {
   background-color: rgb(230, 225, 225) !important;
   position: fixed;
-  top: -90px;
+ 
   width: 100%;
-  display: block;
-  transition: top 0.3s;
+  display: inline-block;
+  
   
   
 }
@@ -81,7 +81,7 @@ background-image: url(../img/svg/checklist.svg);  }
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(31, 0, 207, 0.2), rgba(13, 8, 34, 0.438)), url(../img/ava.jpg);
+  background-image: linear-gradient(to right bottom, rgba(90, 6, 31, 0.2), rgba(13, 8, 34, 0.438)), url(../img/ava.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -104,11 +104,11 @@ background-image: url(../img/svg/checklist.svg);  }
     h1{
       font-size: 1.4rem;
       width: 80vw;
-      font-weight: 900;
+      font-weight: 400;
       margin-bottom: 3rem;
     }
-    h2 {
-      font-size: 1rem;
+    h2{
+      font-size: 1.2rem;
       width: 80vw;
       font-weight: 100;
     }
@@ -120,8 +120,8 @@ background-image: url(../img/svg/checklist.svg);  }
       font-weight: 900;
       margin-bottom: 3rem;
     }
-    h2 {
-      font-size: 1rem;
+    h2{
+      font-size: 1.2rem;
       width: 80vw;
       font-weight: 100;
     }
@@ -140,6 +140,7 @@ background-image: url(../img/svg/checklist.svg);  }
       width: 80vw;
       font-weight: 100;
     }
+    
   } 
 
 
@@ -152,7 +153,7 @@ background-image: url(../img/svg/checklist.svg);  }
 
       .card3 {
         
-       margin-top: 7rem;
+       margin-top: 3rem;
       
       }
 
@@ -166,15 +167,104 @@ background-image: url(../img/svg/checklist.svg);  }
        
         
        /***************************************************************************************
-                          ABOUT-US
+                          ABOUT-Terraclad
        ********************************************************************/
      
 #about-us {
-  padding-top: 7rem;
+  margin-top: 4rem;
+  
 }
 
 #about-us2 {
-  padding-top: 7rem;
+  margin-top: 4rem;
+}
+#foto {
+  height: 35rem;
+  width: 30rem;
+}
+
+#foto2 {
+  height: 35rem;
+  width: 30rem;
+}
+
+
+#foto3 {
+  height: 35rem;
+  width: 30rem;
+}
+
+#foto4 {
+  height: 35rem;
+  width: 30rem;
+}
+
+
+  
+
+
+
+
+
+
+/**********HEADING******************/
+#home-heading {
+  position: relative;
+  min-height: 300px;
+  background: url('../img/hero.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  margin-top: 3rem;
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+  
+
+
+
+
+
+
+
+    @media only screen and (min-width: 1200px) {
+      .about-terraclad {
+        font-size: 3rem;
+        
+      }
+    } 
+
+    /******************* CAROUSEL ****************************/
+    .carousel-item {
+      height: 600px;
+    
+      min-height: 350px;
+      background: no-repeat center center scroll;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      backface-visibility: hidden;
+      
+    }
+   
+
+
+/**********GALLERY*************/
+
+#gallery {
+  margin-top: 5rem;
 }
 
 
@@ -185,26 +275,19 @@ background-image: url(../img/svg/checklist.svg);  }
 
 
 
-/**********FEATURES******************/
 
+
+.footer {
+  margin: 0;
+}
+
+
+    #main-footer {
+      margin-top: 3rem;
   
-    .section-features {
-      padding: 10rem 0;
-      background-image: linear-gradient(to right bottom, rgba(22, 17, 18, 0.8), rgba(202, 14, 54, 0.8)), url(../img/bg-red.jpg);
-      background-size: cover;
-      transform: skewY(-7deg);
-      margin-top: 10rem; }
-
-      
-      .section-features > * {
-        transform: skewY(7deg); }
+      height: 10rem;
+      background-color: rgb(230, 225, 225) !important;
+    }
 
 
-
-
-
-
-
-    @media only screen and (max-width: 500px) {
     
-    } 
