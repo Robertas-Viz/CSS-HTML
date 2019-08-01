@@ -20,7 +20,7 @@ body {
   /*font-size: 16px;*/
   line-height: 2;
   box-sizing: border-box;
-  overflow-x: hidden ;
+  
 
   }
 
@@ -59,12 +59,13 @@ body {
   background-color: rgb(230, 225, 225) !important;
   position: fixed;
  
-  width: 100%;
+  
   display: inline-block;
-  
-  
-  
 }
+
+  
+  
+
 
 .navbar-brand {
   color: black !important;
@@ -112,25 +113,23 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
 
-  .header__text-box {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: azure;
-   }
 
+  #gallery {
+    margin-top: 5rem;
+  }
+  
+  
    
 
     
      /****************************************************************************
-               HEADER SERVICE VIDEO BACKGROUND
+                ROUND IMG 
 *****************************************************************************/
 .why-terraclad-img {
   width: 37rem;
   height: 31rem;
 }
+
 
 
   
@@ -150,6 +149,18 @@ body {
       width: 80vw;
       font-weight: 100;
     }
+
+    
+  } 
+
+
+  @media only screen and (max-width: 4px) {
+   
+    .round-image-service {
+      height: 21rem;
+      width: 25rem ;
+    }
+    
   } 
   @media only screen and (min-width: 768px) {
     h1{
@@ -163,21 +174,30 @@ body {
       width: 80vw;
       font-weight: 100;
     }
+
+  
+    
+    
+    
   } 
 
 
   @media only screen and (min-width: 992px) {
+    
+  
+    
     h1{
       font-size: 2rem ;
-      width: 90vw;
+      width: 100vw;
    
       margin-bottom: 5rem;
     }
     h2 {
       font-size: 2rem;
-      width: 80vw;
+      width: 100vw;
       font-weight: 100;
     }
+   
     
   } 
   @media only screen and (min-width: 1200px) {
@@ -203,7 +223,7 @@ body {
        /****************************************************************************
                      CARDS
        *******************************************************************************/
-
+      
       .card3 {
         
        margin-top: 3rem;
@@ -225,6 +245,7 @@ body {
      
 #about-us {
   margin-top: 5rem !important;
+ 
   
 }
 
@@ -252,7 +273,13 @@ body {
   width: 30rem;
 }
 
+#foto5 {
+  height: 31rem;
+  width: 30rem;
 
+ 
+ 
+}
 
 
 
@@ -276,9 +303,9 @@ body {
   color: #fff;
   margin-top: 2rem;
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(20, 20, 19, 0.6), rgba(5, 5, 5, 0.6)), url(../img/windows.jpg);
+  background-image: linear-gradient(to right bottom, rgba(20, 20, 19, 0.2), rgba(5, 5, 5, 0.2)), url(../img/windows.jpg);
   background-size: cover;
-  transform: skewY(-4deg);
+
   margin-top: -10rem; }
 
   #home-heading-2 {
@@ -293,9 +320,9 @@ body {
     color: #fff;
     margin-top: 5rem !important;
     padding: 20rem 0;
-    background-image: linear-gradient(to right bottom, rgba(20, 20, 19, 0.4), rgba(5, 5, 5, 0.4)), url(../img/field.jpg);
+    background-image: linear-gradient(to right bottom, rgba(20, 20, 19, 0.2), rgba(5, 5, 5, 0.2)), url(../img/field.jpg);
     background-size: cover;
-    transform: skewY(-4deg);
+ 
    }
 
     
@@ -312,19 +339,18 @@ body {
       margin-top: 1rem !important;
       
       padding: 20rem 0;
-      background-image: linear-gradient(to right bottom, rgba(20, 20, 19, 0.4), rgba(5, 5, 5, 0.4)), url(../img/field.jpg);
+      background-image: linear-gradient(to right bottom, rgba(20, 20, 19, 0.2), rgba(5, 5, 5, 0.2)), url(../img/field.jpg);
       background-size: cover;
-      transform: skewY(-4deg);
+
       }
 
-#about> * {
-    transform: skewY(4deg); }
+
 
 
    
   
 .home-heading-margin {
-  margin-top: 6rem !important;
+  margin-top: 4rem !important;
 }
 
 
@@ -376,16 +402,6 @@ body {
    
 
 
-/**********GALLERY*************/
-
-#gallery {
-  margin-top: 5rem;
-}
-
-
-
-
-
 
 
 
@@ -398,7 +414,7 @@ body {
 
 
     #main-footer {
-      margin-top: 3rem;
+      
   
       height: 10rem;
       background-color: rgb(230, 225, 225) !important;
@@ -406,4 +422,53 @@ body {
 
     
     
-    
+    /******************* SERVICES-BOX********************/
+
+
+    .header-services {
+      height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(3, 3, 3, 0.8), rgba(13, 8, 34, 0.438)), url(../img/green1.jpg);
+  background-size: cover;
+  background-position:center;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+
+       
+       
+
+
+
+       /*///////////// VIDEO PLAY/////////////////////////////*/
+
+ 
+#video-play {
+  position: relative;
+  min-height: 300px;
+  background: url('../img/media.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+#video-play a {
+  color: #fff;
+  
+}
+
+#faq a {
+  color: rgb(255, 250, 250);
+  text-decoration: none;
+  
+}
+
+
+
+.service-text {
+  color: rgb(250, 240, 240);
+  
+}
+
