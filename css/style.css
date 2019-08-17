@@ -1,75 +1,478 @@
-/*
-COLORS
 
-Primary: #eb2f64
-Primary light: #FF3366
-Primary dark: #BA265D
+/***************************************************************************
+                          START
+********************************************************************************/
 
-Grey light 1: #faf9f9
-Grey light 2: #f4f2f2
-Grey light 3: #f0eeee
-Grey light 4: #ccc
-
-Grey dark 1: #333
-Grey dark 2: #777
-Grey dark 3: #999
-*/
-:root {
-  --color-primary: #eb2f64;
-  --color-primary-light: #FF3366;
-  --color-primary-dark: #BA265D;
-  --color-grey-light-1: #faf9f9;
-  --color-grey-light-2: #f4f2f2;
-  --color-grey-light-3: #f0eeee;
-  --color-grey-light-4: #ccc;
-  --color-grey-dark-1: #333;
-  --color-grey-dark-2: #777;
-  --color-grey-dark-3: #999;
-  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3); }
-
-* {
-  margin: 0;
-  padding: 0; }
 
 *,
-*::before,
-*::after {
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
-html {
-  box-sizing: border-box;
-  font-size: 62.5%; }
 
+  
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
-  line-height: 1.6;
-  color: var(--color-grey-dark-2);
-  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh; }
+  /*font-size: 16px;*/
+  line-height: 2;
+  box-sizing: border-box;
+  
 
-.container {
-  max-width: 120rem;
-  margin: 8rem auto;
-  background-color: var(--color-grey-light-2);
-  box-shadow: --shadow-dark;
-  min-height: 50rem; }
+  }
+
+  .btn {
+    margin: 1rem;
+  }
+  
+
+  h1 {
+    
+    font-weight: 100 !important;
+  }
+
+ 
+/****************************************************************************
+               NAVIGATION
+*****************************************************************************/
+.navbar .nav-link {
+  font-size: 19px;
+  text-transform: uppercase;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+ 
+ 
+}
+.navbar .nav-link {
+  color: black !important;
+}
+
+.navbar .nav-item.active {
+  border-left: rgb(252, 252, 252) 3px solid;
+  
+  
+}
+#navbar {
+  background-color: rgb(255, 255, 255) !important;
+  position: fixed;
+ 
+  
+  display: inline-block;
+}
+
+  
+.navbar-toggler {
+  margin-right: 20px;
+}
+
+
+.navbar-brand {
+  color: black !important;
+
+  
+}
+
+/****************************************************************************
+               HERO IMG  AND BUTTON
+*****************************************************************************/
+
 
 .header {
-  height: 7rem;
-  background-color: #fff;
-  border-bottom: var(--color-grey-light-2); }
+  height: 95vh;
+  width: 100%;
+  background-image: linear-gradient(to right bottom, rgba(90, 6, 31, 0.2), rgba(13, 8, 34, 0.438)), url(../img/ava.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
 
-.content {
-  display: flex; }
+  .header__text-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: azure;
+   }
 
-.sidebar {
-  background-color: var(--color-grey-dark-1);
-  flex: 0 0 18%; }
+   /****************************************************************************
+               HEADER GALLERY
+*****************************************************************************/
 
-.hotel-view {
-  background-color: #fff;
-  background-color: orangered;
-  flex: 1; }
+
+.header-gallery {
+  height: 95vh;
+
+  background-image: linear-gradient(to right bottom, rgba(3, 3, 3, 0.8), rgba(13, 8, 34, 0.438)), url(../img/namas321.jpg);
+  background-size: cover;
+  background-position:center;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+
+
+  #gallery {
+    margin-top: 5rem;
+  }
+  
+  
+   
+
+    
+     /****************************************************************************
+                ROUND IMG 
+*****************************************************************************/
+.why-terraclad-img {
+  width: 37rem;
+  height: 31rem;
+}
+
+
+
+  
+  
+  /*************************************************************************
+              RESPONSIVE DESIGN
+  ****************************************************************************/
+   @media only screen and (max-width: 576px) {
+    h1{
+      font-size: 1.4rem;
+      width: 80vw;
+      font-weight: 200;
+      margin-bottom: 3rem;
+    }
+    h2{
+      font-size: 1.2rem;
+      width: 80vw;
+      font-weight: 100;
+    }
+    
+    
+  } 
+
+
+  @media only screen and (max-width: 4px) {
+   
+    .round-image-service {
+      height: 21rem;
+      width: 25rem ;
+    }
+    .g-recaptcha {
+      margin-left: 4px;
+      margin-bottom: 40px;
+    }
+    
+  } 
+  @media only screen and (min-width: 768px) {
+    h1{
+      font-size: 1.4rem;
+      width: 80vw;
+      
+      margin-bottom: 3rem;
+    }
+    h2{
+      font-size: 1.2rem;
+      width: 80vw;
+      font-weight: 100;
+    }
+
+  
+    
+    
+    
+  } 
+
+
+  @media only screen and (min-width: 992px) {
+    
+  
+    
+    h1{
+      font-size: 2rem ;
+      width: 100vw;
+   
+      margin-bottom: 5rem;
+    }
+    h2 {
+      font-size: 2rem;
+      width: 100vw;
+      font-weight: 100;
+    }
+   
+    
+  } 
+  @media only screen and (min-width: 1200px) {
+    h1{
+      font-size: 2rem ;
+      width: 100vw;
+   
+      margin-bottom: 5rem;
+    }
+    h2 {
+      font-size: 2rem;
+      width: 100vw;
+      font-weight: 100;
+    }
+    
+    
+  } 
+
+
+
+
+     
+       /****************************************************************************
+                     CARDS
+       *******************************************************************************/
+      
+      .card3 {
+        
+       margin-top: 3rem;
+      
+      }
+
+      .card-img-bottom {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+    }
+    
+     
+       
+        
+       /***************************************************************************************
+                          ABOUT-Terraclad
+       ********************************************************************/
+     
+#about-us {
+  margin-top: 5rem !important;
+ 
+  
+}
+
+#about-us2 {
+  margin-top: 4rem;
+}
+#foto {
+  height: 35rem;
+  width: 30rem;
+}
+
+#foto2 {
+  height: 35rem;
+  width: 30rem;
+}
+
+
+#foto3 {
+  height: 35rem;
+  width: 30rem;
+}
+
+#foto4 {
+  height: 35rem;
+  width: 30rem;
+}
+
+#foto5 {
+  height: 31rem;
+  width: 30rem;
+
+ 
+ 
+}
+
+
+
+  
+
+
+
+
+
+
+/**********HEADING******************/
+#home-heading {
+  position: relative;
+  min-height: 300px;
+ 
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  margin-top: 2rem;
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(20, 20, 19, 0.2), rgba(5, 5, 5, 0.2)), url(../img/windows.jpg);
+  background-size: cover;
+  margin-top: -10rem; }
+
+  #home-heading-2 {
+    position: relative;
+    min-height: 300px;
+   
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    margin-top: 5rem !important;
+    padding: 20rem 0;
+    background-image: linear-gradient(to right bottom, rgba(20, 20, 19, 0.2), rgba(5, 5, 5, 0.2)), url(../img/img28.jpg);
+    background-size: cover;
+ 
+   }
+
+    
+    #home-heading-3 {
+      position: relative;
+      min-height: 300px;
+     
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      text-align: center;
+      color: #fff;
+      margin-top: 1rem !important;
+      
+      padding: 20rem 0;
+      background-image: linear-gradient(to right bottom, rgba(20, 20, 19, 0.2), rgba(5, 5, 5, 0.2)), url(../img/field.jpg);
+      background-size: cover;
+
+      }
+
+
+
+
+   
+  
+.home-heading-margin {
+  margin-top: 4rem !important;
+}
+
+
+.home-heading-margin-3 {
+  margin-top: .3rem !important;
+}
+.circle-image {
+  padding-top: 1.4rem !important;
+}
+.circle-image-2 {
+  padding-top: -3rem !important;
+}
+  
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+  
+
+
+
+.service-img  {
+  height: 35rem;
+  width: 35rem;
+}
+
+
+
+
+    /******************* CAROUSEL ****************************/
+    .carousel-item {
+      height: 600px;
+    
+      min-height: 350px;
+      background: no-repeat center center scroll;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      backface-visibility: hidden;
+      
+    }
+   
+
+
+
+
+
+
+/********** FOOTER**********/
+
+.footer {
+  margin: 0;
+}
+
+
+    #main-footer {
+      
+  
+      height: 10rem;
+      background-color: rgb(230, 225, 225) !important;
+    }
+
+    
+    
+    /******************* SERVICES-BOX********************/
+
+
+    .header-services {
+      height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(3, 3, 3, 0.8), rgba(13, 8, 34, 0.438)), url(../img/25.jpg);
+  background-size: cover;
+  background-position:center;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+
+       
+       
+
+
+
+       /*///////////// VIDEO PLAY/////////////////////////////*/
+
+ 
+#video-play {
+  position: relative;
+  min-height: 300px;
+  background: url('../img/img26.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+#video-play a {
+  color: #fff;
+  
+}
+
+#faq a {
+  color: rgb(255, 250, 250);
+  text-decoration: none;
+  
+}
+
+
+
+.service-text {
+  color: rgb(250, 240, 240);
+  
+}
+
