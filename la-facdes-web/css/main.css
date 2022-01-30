@@ -1,0 +1,321 @@
+/*Reset*/
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+/* Typography */
+:root {
+  font-size: 62.5%; }
+ body {
+  font-family: 'Roboto Mono', monospace;
+   }
+   
+  
+/* Variables */
+html {
+  --color-primary: hsl(0, 0%, 98%);
+  --color-secondary: hsla(60, 74%, 46%, 0.913);
+  --color-tertiary: hsla(0, 63%, 32%, 0.927);
+  --color-quaternary: rgb(0, 0, 0);
+  }
+/*  Button styles */
+
+
+/* CSS Grid Styles */
+  .container {
+    display: grid;
+    grid-template-columns: [container-start] 1fr [center-start] repeat(6, [col-start] minmax(min-content, 16.66667rem) [col-end]) [center-end] 1fr [container-end];
+    grid-template-rows: min-content 90vh repeat(9, min-content); }
+  
+
+
+li {
+  list-style: none; }
+
+a:link,
+a:visited {
+  display: block;
+  text-decoration: none;
+  color: var(--color-quaternary);
+  letter-spacing: 0.2rem;
+  font-size: calc(1.5rem + 1vw); }
+
+i {
+  color: var(--color-primary);
+  font-size: calc(1.5rem + 2vw); }
+
+.img-prefix {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
+/* Button styles */
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+    .btn--white::after {
+      background-color: #fff; }
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 1rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+
+.btn--animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards; }
+
+/* Hero Image  and hero text Styles */
+.heading-primary {
+  color: #fff;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+
+
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /*
+        animation-delay: 3s;
+        animation-iteration-count: 3;
+        */ }
+
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
+
+    .header {
+      height: 100vh;
+      background-image: linear-gradient(to right bottom, rgba(0, 1, 0, 0.461), rgba(43, 42, 13, 0.8)), url(../img/img18.jpg);
+      background-size: cover;
+      background-position: top;
+      position: relative;
+       }
+      
+
+      .header__text-box {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center; }
+
+   
+/* navigation styles */
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem;
+  background-image: linear-gradient(135deg, var(--color-primary), var(--color-primary));
+  overflow: hidden;
+  z-index: 200;
+ }
+
+/*brand could be name or image*/
+.brand img {
+  width: 120px;
+  height: 100px; }
+
+.navbar .nav-list {
+  padding: 20rem 0;
+  list-style-type: none;
+  text-align: center; }
+
+.nav-list li {
+  margin: 1rem 0;
+  letter-spacing: 0.1rem; }
+
+.nav-list li a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.4rem;
+  color: var(--color-quaternary);
+  font-size: 2.4rem; 
+}
+
+/*toggler button*/
+.navbar .toggler {
+  margin-right: 2em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+  outline: none; }
+
+/*hamburger*/
+.toggler .line {
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: var(--color-quaternary);
+  margin-bottom: 0.4rem;
+  /*from hamburger to cross*/
+  transition: 0.4s; }
+
+/* close icon (X) styles  */
+.cross .line:nth-child(1) {
+  transform: rotate(-45deg) translate(-7px, 4px); }
+
+.cross .line:nth-child(2) {
+  opacity: 0; }
+
+.cross .line:nth-child(3) {
+  transform: rotate(45deg) translate(-7px, -5px); }
+
+
+/*styles only for mobile and tablets devices*/
+@media (max-width: 767px) {
+
+  /*Styles to hide nav by transform / navbar z-index:500 hides body text when navbar slides*/
+
+  .navbar {
+    z-index: 500;
+  }
+  .nav-list-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to left bottom, rgba(12, 3, 3, 0.66), rgba(14, 6, 6, 0.427)), url(../img/drawings2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    z-index: 2;
+    transform: translateX(-100%);
+    /*nav sidebar speed*/
+    transition: all 0.5s linear;
+    opacity: 0.5; }
+
+  .brand img {
+    width: 60px;
+    height: 60px; }
+
+  .brand2 img {
+    width: 60px;
+    height: 60px; }
+
+  .nav-list li a {
+    display: block;
+    text-transform: uppercase;
+    padding: 1.4rem;
+    color: var(--color-primary);
+    font-size: 3.4rem; }
+  /* Hero Image text styles */
+  .heading-primary--main {
+    
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+   
+    }
+    /* Button styles */
+    .header__text-box {
+      top: 75%;
+      }
+    
+
+    .heading-primary {
+      text-transform: capitalize;
+      font-size: 7vw;
+      color: rgb(255, 255, 255);
+      backface-visibility: hidden;
+      margin-bottom: 2rem; }
+
+      .btn, .btn:link, .btn:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1.5rem 4rem;
+      display: inline-block;
+      border-radius: 1rem;
+      transition: all .2s;
+      position: relative;
+      font-size: 1.2rem;
+      border: none;
+      cursor: pointer; }
+
+      .heading-primary--sub {
+      color:  rgb(233, 194, 20);
+      padding-top: 2rem;    
+      width: 90vw;
+      font-size: 4vw;
+      letter-spacing: 0.5rem;
+          }
+      
+        
+  }
+
+/*make nav visible by transform*/
+.nav-active {
+  transform: translateX(0%);
+  opacity: 1; }
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+/*navigation for tablet and desktops*/
+@media (min-width: 768px) {
+  .navbar {
+    justify-content: space-around;
+    padding: 0.4rem 0; }
+  /*make nav-list horizontal on big screens*/
+  .navbar .nav-list {
+    display: flex;
+    flex-direction: row;
+    padding: 0; }
+  .nav-list li {
+    margin: 0 0.4rem; }
+  /*hide toggler button on big screens*/
+  .navbar .toggler {
+    display: none; } }
+
+
+ 
